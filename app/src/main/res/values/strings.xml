@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">旅行记忆</string>
+    <string name="record">打卡</string>
+    <string name="home">主页</string>
+    <string name="map">地图</string>
+    <string name="unknown">未知</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+
+    // 地图
+    <string name="switch_map_style">切换视图样式</string>
+    <string name="privacy_protocol">隐私协议</string>
+    <string name="privacy_protocol_content">您是否同意腾讯地图SDK隐私协议？</string>
+    <string name="locating">定位中，可能需要一点时间</string>
+    <string name="locating_failed">定位失败</string>
+    <string name="locating_successful">定位成功</string>
+
+    // 主页
+    <string name="my_tour">我的行程</string>
+    <string name="blank_content">您还没有行程，赶紧去创建吧！</string>
+    <string name="take_photos">拍摄</string>
+    <string name="choose_picture_from_album">从相册选择</string>
+    <string name="choose_pictures">选择照片</string>
+
+    // 时间
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+
+    // 记录添加
+    <string name="add_record">添加</string>
+    <string name="default_context">记录此时的心情</string>
+    <string name="add_position">记录当前位置</string>
+    <string name="add_tag">添加标签</string>
+
+    // 默认数据
+    <string name="default_address">未知地点</string>
+    <string name="default_city">未知地点</string>
+    <string name="default_description">无题</string>
+    <string name="default_tag">默认分组</string>
+
+    // 权限请求
+    <string name="location_permission_request">权限请求</string>
+    <string name="location_permission_denied">拒绝了定位权限，定位服务将不可用</string>
+    <string name="location_permission_granted">已取得定位权限</string>
+
+    // 详情界面
+    <string name="context">详情</string>
+    <string name="delete">删除</string>
+    <string name="delete_confirm">确认删除吗？</string>
+
+</resources>

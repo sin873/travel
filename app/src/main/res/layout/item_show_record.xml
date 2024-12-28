@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_time"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="@string/today"
+                android:textAlignment="viewStart"
+                android:textSize="16sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/textView_city"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:text="@string/default_city"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView_picture"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:background="@android:drawable/alert_light_frame"
+            app:srcCompat="@drawable/baseline_camera_alt_50" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_description"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="@string/blank_content"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView_tag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/default_tag"
+                android:textAlignment="viewEnd"
+                android:textColor="#00BCD4"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
