@@ -1,4 +1,4 @@
-package com.example.tourmemory.mainActivty;
+package com.example.tourmemory.mainActivity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -22,7 +22,6 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.tourmemory.R;
 import com.example.tourmemory.data.getdata.RecordDataBank;
-import com.example.tourmemory.data.record.RecordData;
 import com.example.tourmemory.data.record.RecordManager;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

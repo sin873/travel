@@ -10,7 +10,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +26,6 @@
                 android:id="@+id/imageButton_back"
                 android:layout_width="40dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0"
                 android:background="#00FFFFFF"
                 app:srcCompat="?attr/actionModeCloseDrawable" />
 
@@ -40,7 +38,6 @@
                 android:id="@+id/button_add_record"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
                 android:text="@string/add_record" />
 
         </LinearLayout>
@@ -53,7 +50,8 @@
                 android:id="@+id/editText_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/default_context" />
+                android:gravity="center_horizontal"
+                android:hint="即刻记录" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,9 +62,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView_images"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="wrap_content" />
 
         <Space
             android:layout_width="match_parent"
@@ -79,52 +75,78 @@
 
             <Space
                 android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0" />
+                android:layout_height="match_parent" />
 
             <ImageButton
                 android:id="@+id/imageButton_add_loc"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_weight="0"
-                android:background="@android:drawable/btn_default"
-                app:srcCompat="@drawable/baseline_add_location_50" />
+                android:src="@drawable/clock"
+                android:maxWidth="50dp"
+                android:maxHeight="50dp"
+                android:scaleType="fitCenter"/>
 
             <TextView
                 android:id="@+id/textView_postion"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:gravity="center|start"
-                android:text="@string/add_position" />
+                android:text="足迹打卡" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
             android:orientation="horizontal">
 
             <Space
                 android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0" />
+                android:layout_height="match_parent" />
 
             <ImageButton
                 android:id="@+id/imageButton_add_tag"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_weight="0"
-                android:background="@android:drawable/btn_default"
-                app:srcCompat="@drawable/baseline_tag_50" />
+                android:src="@drawable/descript"
+                android:maxWidth="50dp"
+                android:maxHeight="50dp"
+                android:scaleType="fitCenter"/>
 
             <TextView
                 android:id="@+id/textView_tag"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:gravity="center|start"
-                android:text="@string/add_tag" />
+                android:text="足迹简介" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="match_parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton_add_photo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:maxWidth="50dp"
+                android:maxHeight="50dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/photo" />
+
+            <TextView
+                android:id="@+id/textView_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:text="添加照片" />
 
         </LinearLayout>
 

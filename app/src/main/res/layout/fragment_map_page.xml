@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainActivty.MapFragment">
+    tools:context=".mainActivity.MapFragment">
 
     <com.tencent.tencentmap.mapsdk.maps.TextureMapView
         android:layout_width="wrap_content"

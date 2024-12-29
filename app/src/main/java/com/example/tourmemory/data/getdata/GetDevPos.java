@@ -45,6 +45,7 @@ public class GetDevPos {
         Toast.makeText(context, context.getString(R.string.locating), Toast.LENGTH_SHORT).show();
         Log.d("Tencent Map", "LocateOnce");
         isRequested = true;
+
     }
 
     public void StartLocate() {
@@ -73,8 +74,8 @@ public class GetDevPos {
         @Override
         public void onLocationChanged(TencentLocation location, int error, String reason) {
             if (error == TencentLocation.ERROR_OK && isRequested) {
-                // 定位成功但位置信息未知时，返回
-                if(location.getAddress() == null || location.getAddress().equals("Unknown") && failCount < 3){
+                // 定位成功但位置信息未知时，返回并重试
+                if ((location.getAddress() == null || location.getAddress().equals("Unknown")) && failCount < 3) {
                     failCount++;
                     Log.i("Tencent Map Got Unknown Location", "Location: " + location);
                     return;
@@ -86,12 +87,14 @@ public class GetDevPos {
 
                 Toast.makeText(context, context.getString(R.string.locating_successful), Toast.LENGTH_SHORT).show();
                 callBack.callback(location);
-            }
-            else if (!isRequested)
+            } else if (!isRequested) {
                 Log.i("Tencent Map Ready", "Waiting for user to locate");
-            else
+            } else {
                 Log.i("Tencent Map Error", "error: " + error + ", reason: " + reason);
+                Toast.makeText(context, context.getString(R.string.locating_failed), Toast.LENGTH_SHORT).show();
+            }
         }
+
 
         // 状态更新回调
         @Override

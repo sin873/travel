@@ -1,4 +1,4 @@
-package com.example.tourmemory.mainActivty;
+package com.example.tourmemory.mainActivity;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -42,8 +42,11 @@ public class MapFragment extends Fragment {
 
         // 获取并初始化地图控件
         mapView = rootView.findViewById(R.id.mapView);
+
         tencentMap = mapView.getMap();
         getLocation = new GetDevPos(getContext(), new PositionGot());
+
+
 
         // 地图样式切换按钮
         ImageButton btn = rootView.findViewById(R.id.imageButton_switch);
@@ -65,7 +68,9 @@ public class MapFragment extends Fragment {
             if(clickMarker!= null) {
                 clickMarker.remove();
             }
+
             getLocation.LocateOnce();
+
         });
 
         // 点击地图，添加标记
@@ -121,8 +126,14 @@ public class MapFragment extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        selfPosMarker.remove();
-        clickMarker.remove();
+        if (selfPosMarker != null) {
+            selfPosMarker.remove();
+            selfPosMarker = null;
+        }
+        if (clickMarker != null) {
+            clickMarker.remove();
+            clickMarker = null;
+        }
         getLocation.StopLocate();
         mapView.onDestroy();
     }

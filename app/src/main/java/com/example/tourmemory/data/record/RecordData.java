@@ -122,7 +122,12 @@ public class RecordData implements Serializable {
     }
 
     public Bitmap getBitmap(int i) {
-        return bitmaps.get(i);
+        if (i >= 0 && i < bitmaps.size()) {
+            return bitmaps.get(i);
+        } else {
+            // 处理索引越界的情况，例如返回默认值或抛出自定义异常
+            return null; // 或者其他合适的处理方式
+        }
     }
 
     public void setBitmaps(ArrayList<Bitmap> bitmaps) {
@@ -130,7 +135,12 @@ public class RecordData implements Serializable {
     }
 
     public String getPicturePath(int i) {
-        return picturePathList.get(i);
+        if (i >= 0 && i < picturePathList.size()) {
+            return picturePathList.get(i);
+        } else {
+            // 处理索引越界的情况，例如返回默认值或抛出自定义异常
+            return null; // 或者其他合适的处理方式
+        }
     }
 
     public void setPicturePathList(ArrayList<String> picturePathList) {

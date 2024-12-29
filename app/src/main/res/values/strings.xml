@@ -51,5 +51,6 @@
     <string name="context">详情</string>
     <string name="delete">删除</string>
     <string name="delete_confirm">确认删除吗？</string>
+    <string name="add_photo">add</string>
 
 </resources>

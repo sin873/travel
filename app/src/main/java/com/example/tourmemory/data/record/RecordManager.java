@@ -24,10 +24,6 @@ public class RecordManager{
         onRecordChangedListener = null;
     }
 
-    public RecordManager(ArrayList<RecordData> recordDataList, OnRecordChangedListener onRecordChangedListener) {
-        this.recordDataList = recordDataList;
-        this.onRecordChangedListener = onRecordChangedListener;
-    }
 
     public void setOnRecordChangedListener(OnRecordChangedListener onRecordChangedListener) {
         this.onRecordChangedListener = onRecordChangedListener;
@@ -46,11 +42,10 @@ public class RecordManager{
     }
 
     // 删除方法
-    public RecordData remove(int index){
+    public void remove(int index){
         recordDataList.remove(index);
         if(onRecordChangedListener!= null)
             onRecordChangedListener.onRecordChanged(index);
-        return null;
     }
 
     // 清楚方法

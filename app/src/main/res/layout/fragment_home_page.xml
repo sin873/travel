@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainActivty.HomeFragment">
+    tools:context=".mainActivity.HomeFragment">
 
     <TextView
         android:id="@+id/textView_home_bar"

@@ -1,4 +1,4 @@
-package com.example.tourmemory.mainActivty;
+package com.example.tourmemory.mainActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

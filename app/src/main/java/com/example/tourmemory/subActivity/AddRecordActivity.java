@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,7 +47,12 @@ public class AddRecordActivity extends AppCompatActivity {
     private String tag = "";
 
     TextInputEditText descriptionEditText;
+    private static final int PICK_IMAGE_REQUEST = 1;
 
+    public void openGallery() {
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent, PICK_IMAGE_REQUEST);
+    }
     // 注册一个用于选择位置的活动结果启动器
     private final ActivityResultLauncher<Intent> addRecord =
             registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result ->{
@@ -158,11 +164,11 @@ public class AddRecordActivity extends AppCompatActivity {
         builder.setView(dialogView)
                 .setCancelable(true)
                 .setPositiveButton(getString(R.string.confirm), (dialog, which) -> {
-                   // 获取用户输入的描述
-                   tag = Objects.requireNonNull(inputEditText.getText()).toString();
-                   // 更新显示
-                   ((TextView)findViewById(R.id.textView_tag)).setText(tag);
-               })
+                    // 获取用户输入的描述
+                    tag = Objects.requireNonNull(inputEditText.getText()).toString();
+                    // 更新显示
+                    ((TextView)findViewById(R.id.textView_tag)).setText(tag);
+                })
                 .setNegativeButton(getString(R.string.cancel), (dialog, which) -> dialog.cancel());
 
         // 创建并显示对话框
